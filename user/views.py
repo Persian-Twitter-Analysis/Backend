@@ -15,8 +15,11 @@ class User(APIView):
     def get(self, request):
         print(request.GET.get('username', ''))
         username = request.GET.get('username', '')
-        user = UserModel.objects.filter(tweeter_id=username)[0]
-        serialized_obj = UserSerializer(user)
+        user = UserModel.objects.filter(tweeter_id=username)
+        if len(user) == 0:
+            return Response({"data": "USER_NOT_FOUND"}, status=status.HTTP_200_OK)
+       
+        serialized_obj = UserSerializer(user[0])
         obj = JSONRenderer().render(serialized_obj.data)
         return Response({"data": obj}, status=status.HTTP_200_OK)
     

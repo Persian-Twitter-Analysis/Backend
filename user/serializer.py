@@ -1,12 +1,13 @@
 from rest_framework import serializers
 
 class UserSerializer(serializers.Serializer):
-    id = serializers.CharField(max_length=200)
-    tweeter_id = serializers.CharField(max_length=200)
-    images_sentiments = serializers.CharField(max_length=200)
-    tweets_sentiments = serializers.CharField(max_length=200)
-    friends_sentiments = serializers.CharField(max_length=200)
-    images_distance = serializers.CharField(max_length=200)
-    tweets_distance = serializers.CharField(max_length=200)
-    images_topics = serializers.CharField(max_length=200)
-    tweets_topics = serializers.CharField(max_length=200)
+    id = serializers.CharField()
+    tweeter_id = serializers.CharField()
+    images_sentiments = serializers.CharField()
+    tweets_sentiments = serializers.CharField()
+    friends_sentiments = serializers.CharField()
+    images_distance = serializers.CharField()
+    tweets_distance = serializers.CharField()
+    images_tweets_distance = serializers.CharField()
+    images_topics = serializers.CharField()
+    tweets_topics = serializers.CharField()

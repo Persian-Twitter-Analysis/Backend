@@ -1,4 +1,5 @@
 from django.db import models
+import json
 
 # Create your models here.
 class User(models.Model):
@@ -9,5 +10,6 @@ class User(models.Model):
     friends_sentiments = models.CharField(max_length=200, default="", blank=True)
     images_distance = models.CharField(max_length=200, default="", blank=True)
     tweets_distance = models.CharField(max_length=200, default="", blank=True)
+    images_tweets_distance = models.CharField(max_length=200, default="", blank=True)
     images_topics = models.CharField(max_length=200, default="", blank=True)
     tweets_topics = models.CharField(max_length=200, default="", blank=True)

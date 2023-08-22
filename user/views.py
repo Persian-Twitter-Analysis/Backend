@@ -10,6 +10,8 @@ from .serializer import UserSerializer
 from rest_framework.renderers import JSONRenderer
 from django.db.models.functions import Length
 
+from dist import distance
+
 class User(APIView):
 
     def get(self, request):

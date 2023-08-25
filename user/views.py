@@ -11,6 +11,7 @@ from rest_framework.renderers import JSONRenderer
 from django.db.models.functions import Length
 
 from dist import distance
+from dist import normalizer
 
 class User(APIView):
 

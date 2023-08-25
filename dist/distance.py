@@ -20,7 +20,7 @@ def earth_movers_distance(p, q):
     # Calculate the Earth Mover's Distance
     emd = cost_matrix[row_indices, col_indices].sum()
 
-    return 1-emd
+    return int((1-emd)*100)
 
 b = UserModel.objects.filter()
 for i in b:
